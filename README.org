@@ -40,13 +40,13 @@
 
 ** Team Members
 + Alexander Mire
-  - github: bobdaball
+  - github: [[https://github.com/bobdaball][bobdaball]]
 + Chucky Bennett
-  - github: cpbennett4
+  - github: [[https://github.com/cpbennett4][cpbennett4]]
 + David Riccardi-Zhu
-  - github: dwrz
+  - github: [[https://github.com/dwrz/][dwrz]]
 + Jon Tang
-  - github: jtang17
+  - github: [[https://github.com/jtang17][jtang17]]
 
 ** Timezones
 - Alex: Eastern
