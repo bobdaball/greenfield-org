@@ -1,0 +1,19 @@
+0. What’s your team name, and who’s on your team?
+1. What's the link to your GitHub repo?
+2. What's the link to your Waffle.io (or alternative)?
+3. What's your project idea (in 1 or 2 sentences)?
+4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?
+5. What parts have you not decided yet?
+6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?
+7. What is your app going to look like? (use moqups.com or a piece of paper to sketch something out)
+8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time? (For legacy only: Please indicate which of the features/functionality are already in the greenfield project, but in a broken state, as they should be highly prioritized.)
+9. What’s your schema going to look like? (diagram)
+10. What components are necessary (client side, server side, database, outside APIs, etc)? How are these pieces going to be connected? (architectural diagram)
+11. What are your RESTful API endpoints going to be?
+12. Who's working on which parts of the app?
+13. What are you most excited about for this project? (one sentence from each team member)
+14. What are you looking forward to the least for this project? (one sentence from each team member)
+15. What other questions do you have for your tech mentor?
+16. (Solo week) What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?
+
+Questions 9 through 11 should only be answered if you have time to do so.
