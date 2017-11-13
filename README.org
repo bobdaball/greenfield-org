@@ -14,6 +14,7 @@
     - [ ] Setup CONTRIBUTING.md
       - REMINDER to use git pull --rebase origin master if using single history
   - [ ] Setup branches.
+    - Production? Staging?
 + [ ] Setup basic server.
 + [ ] Deploy server.
 + [ ] Technology stack decisions:
