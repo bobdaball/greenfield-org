@@ -1,3 +1,8 @@
+* Project Goals
+
+** User Stories
++ [ ] As a ... when I ... I expect ....
+
 * Project Logistics
 
 *** Technology Stack
@@ -11,7 +16,6 @@ Node
 
 
 *** Github
-
 
 *** Waffle
 
