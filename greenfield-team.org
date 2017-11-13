@@ -1,0 +1,70 @@
+* Project Logistics
+
+*** Technology Stack
+MongoDB
+Express
+React
+Node
+
+
+*** Style Guide
+
+
+*** Github
+
+
+*** Waffle
+
+
+* Team Logistics
+
+** Team Members
+Alexander Mire
+Chucky Bennett
+David Riccardi-Zhu
+Jon Tang
+
+** Timezones
+Alex: Eastern
+Chucky: Mountain
+David: Eastern
+Jon: Pacific
+
+** Communications
+Slack: 
+Zoom: 
+
+*** Sprint Schedule
+**** Day 1
+|----------+------------|
+| Event    | Time       |
+|----------+------------|
+| Planning | 30 minutes |
+| Standup  | 15 minutes |
+|----------+------------|
+
+**** Day 2
+|------------+------------|
+| Event      | Time       |
+|------------+------------|
+| Standup    | 15 minutes |
+| Reflection | 30 minutes |
+|------------+------------|
+
+
+
+*** Standup Meeting Questions
+1. What did you do since last time? 
+2. Are what you doing until next time? 
+3. What's blocking your work? 
+
+** Solo Week Hours
+Morning Half-Day (?)
+
+** Learning Focus Areas
+Aesthetics (Bootstrap, Material.io)
+Async + Promises
+Authentication 
+Data Visualization
+Git Team Workflow
+React
