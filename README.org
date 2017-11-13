@@ -1,42 +1,49 @@
+* Project Tracking
+
+** Backlog
+
+** In-Progress
+
+** Pull Request / Ready-for-Review
+
+** Ready
+
 * Project Goals
 
 ** User Stories
-+ [ ] As a ... when I ... I expect ....
++ [ ] As a user when I ... I expect ....
 
 * Project Logistics
 
 *** Technology Stack
-MongoDB
-Express
-React
-Node
-
+- MongoDB
+- Express
+- React
+- Node
 
 *** Style Guide
-
 
 *** Github
 
 *** Waffle
 
-
 * Team Logistics
 
 ** Team Members
-Alexander Mire
-Chucky Bennett
-David Riccardi-Zhu
-Jon Tang
+- Alexander Mire
+- Chucky Bennett
+- David Riccardi-Zhu
+- Jon Tang
 
 ** Timezones
-Alex: Eastern
-Chucky: Mountain
-David: Eastern
-Jon: Pacific
+- Alex: Eastern
+- Chucky: Mountain
+- David: Eastern
+- Jon: Pacific
 
 ** Communications
-Slack: 
-Zoom: 
+- Slack: 
+- Zoom: 
 
 *** Sprint Schedule
 **** Day 1
@@ -56,7 +63,6 @@ Zoom:
 |------------+------------|
 
 
-
 *** Standup Meeting Questions
 1. What did you do since last time? 
 2. Are what you doing until next time? 
@@ -66,9 +72,9 @@ Zoom:
 Morning Half-Day (?)
 
 ** Learning Focus Areas
-Aesthetics (Bootstrap, Material.io)
-Async + Promises
-Authentication 
-Data Visualization
-Git Team Workflow
-React
++ Aesthetics (Bootstrap, Material.io)
++ Async + Promises
++ Authentication 
++ Data Visualization
++ Git Team Workflow
++ React
