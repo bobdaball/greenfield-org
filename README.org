@@ -6,18 +6,19 @@
 
 ** Backlog
 + [ ] Decide on idea.
+  - [ ] Setup README.md / Press-Release
 + [ ] Setup eslint style guide.
   - [ ] Setup STYLE-GUIDE.md
 + [ ] Setup github project.
   - [ ] Decide on rebase vs merge workflow
+    - [ ] Setup CONTRIBUTING.md
+      - REMINDER to use git pull --rebase origin master if using single history
   - [ ] Setup branches.
 + [ ] Setup basic server.
 + [ ] Deploy server.
 + [ ] Technology stack decisions:
   - [ ] Use Redux or not?
   - [ ] Use webpack or not?
-+ [ ] Setup README.md / Press-Release
-+ [ ] Setup CONTRIBUTING.md
 
 ** In-Progress
 
