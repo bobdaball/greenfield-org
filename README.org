@@ -1,15 +1,23 @@
 * Project Tracking
 
+** Important Dates
+- Final Deadline: Monday, November 27
+- Solo Week: Monday, November 20
+
 ** Backlog
 + [ ] Decide on idea.
 + [ ] Setup eslint style guide.
+  - [ ] Setup STYLE-GUIDE.md
 + [ ] Setup github project.
-  + [ ] Setup branches.
+  - [ ] Decide on rebase vs merge workflow
+  - [ ] Setup branches.
 + [ ] Setup basic server.
 + [ ] Deploy server.
 + [ ] Technology stack decisions:
   - [ ] Use Redux or not?
   - [ ] Use webpack or not?
++ [ ] Setup README.md / Press-Release
++ [ ] Setup CONTRIBUTING.md
 
 ** In-Progress
 
@@ -57,6 +65,11 @@
   - github: [[https://github.com/dwrz/][dwrz]]
 + Jon Tang
   - github: [[https://github.com/jtang17][jtang17]]
+
+*** Team Roles
++ Product Owner:
++ Scrum Master: 
++ Development Team:
 
 ** Timezones
 - Alex: Eastern
