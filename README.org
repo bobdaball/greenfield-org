@@ -3,6 +3,7 @@
 ** Backlog
 + [ ] Setup eslint style guide.
 + [ ] Setup github project.
+  + [ ] Setup branches.
 + [ ] Setup basic server.
 + [ ] Deploy server.
 
