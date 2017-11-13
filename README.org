@@ -29,16 +29,20 @@
 
 * Project Logistics
 
+*** Github
+
+
+*** Documentation
+
+*** Style Guide
+- AirBNB?
+
+
 *** Technology Stack
 - MongoDB
 - Express
 - React
 - Node
-
-*** Style Guide
-- AirBNB?
-
-*** Github
 
 *** Waffle
 
