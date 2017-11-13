@@ -1,10 +1,10 @@
 * Project Tracking
 
 ** Backlog
-*** TODO Setup eslint style guide.
-*** TODO Setup github project.
-*** TODO Setup basic server.
-*** TODO Deploy server.
++ [ ] Setup eslint style guide.
++ [ ] Setup github project.
++ [ ] Setup basic server.
++ [ ] Deploy server.
 
 ** In-Progress
 
