@@ -6,6 +6,9 @@
   + [ ] Setup branches.
 + [ ] Setup basic server.
 + [ ] Deploy server.
++ [ ] Technology stack decisions:
+  - [ ] Use Redux or not?
+  - [ ] Use webpack or not?
 
 ** In-Progress
 
@@ -27,7 +30,7 @@
 - Node
 
 *** Style Guide
-AirBNB?
+- AirBNB?
 
 *** Github
 
