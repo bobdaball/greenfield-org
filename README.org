@@ -23,6 +23,9 @@
 + [ ] As a user when I ... I expect ....
 
 ** Stages
+*** Basic
+
+*** Extended
 
 * Project Logistics
 
