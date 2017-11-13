@@ -19,8 +19,10 @@
 
 * Project Goals
 
-** User Stories
+** User Stories / Features
 + [ ] As a user when I ... I expect ....
+
+** Stages
 
 * Project Logistics
 
