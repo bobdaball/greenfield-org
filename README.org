@@ -1,6 +1,7 @@
 * Project Tracking
 
 ** Backlog
++ [ ] Decide on idea.
 + [ ] Setup eslint style guide.
 + [ ] Setup github project.
   + [ ] Setup branches.
@@ -43,7 +44,7 @@
   - github: [[https://github.com/bobdaball][bobdaball]]
 + Chucky Bennett
   - github: [[https://github.com/cpbennett4][cpbennett4]]
-+ David Riccardi-Zhu
++ David Wen Riccardi-Zhu
   - github: [[https://github.com/dwrz/][dwrz]]
 + Jon Tang
   - github: [[https://github.com/jtang17][jtang17]]
