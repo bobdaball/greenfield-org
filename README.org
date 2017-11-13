@@ -1,6 +1,10 @@
 * Project Tracking
 
 ** Backlog
++ [ ] Setup eslint style guide.
++ [ ] Setup github project.
++ [ ] Setup basic server.
++ [ ] Deploy server.
 
 ** In-Progress
 
@@ -22,6 +26,7 @@
 - Node
 
 *** Style Guide
+AirBNB?
 
 *** Github
 
@@ -30,16 +35,20 @@
 * Team Logistics
 
 ** Team Members
-- Alexander Mire
-- Chucky Bennett
-- David Riccardi-Zhu
-- Jon Tang
++ Alexander Mire
+  - github: bobdaball
++ Chucky Bennett
+  - github: cpbennett4
++ David Riccardi-Zhu
+  - github: dwrz
++ Jon Tang
+  - github: jtang17
 
 ** Timezones
 - Alex: Eastern
 - Chucky: Mountain
 - David: Eastern
-- Jon: Pacific
+- Jon: Pacific 
 
 ** Communications
 - Slack: 
