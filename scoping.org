@@ -1,19 +1,128 @@
-0. What’s your team name, and who’s on your team?
-1. What's the link to your GitHub repo?
-2. What's the link to your Waffle.io (or alternative)?
-3. What's your project idea (in 1 or 2 sentences)?
-4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?
-5. What parts have you not decided yet?
-6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?
-7. What is your app going to look like? (use moqups.com or a piece of paper to sketch something out)
-8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time? (For legacy only: Please indicate which of the features/functionality are already in the greenfield project, but in a broken state, as they should be highly prioritized.)
-9. What’s your schema going to look like? (diagram)
-10. What components are necessary (client side, server side, database, outside APIs, etc)? How are these pieces going to be connected? (architectural diagram)
-11. What are your RESTful API endpoints going to be?
-12. Who's working on which parts of the app?
-13. What are you most excited about for this project? (one sentence from each team member)
-14. What are you looking forward to the least for this project? (one sentence from each team member)
-15. What other questions do you have for your tech mentor?
-16. (Solo week) What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?
+*0. What’s your team name, and who’s on your team?*
+Stone and Sand
 
-Questions 9 through 11 should only be answered if you have time to do so.
+*1. What's the link to your GitHub repo?*
+https://github.com/stoneandsand/stoneandsand/
+
+*2. What's the link to your Waffle.io (or alternative)?*
+https://waffle.io/stoneandsand/stoneandsand 
+
+*3. What's your project idea (in 1 or 2 sentences)?*
+Daily life event tracker with data visualization.
+
+*4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?*
+# QUESTIONS
+# QUESTIONS
+# QUESTIONS
+# jQuery vs Axios ???
+# Redux ???
+
+MongoDB + Mongoose
+Express
+React + jQuery(?) Axios
+Node
+
+Additional technologies:
+Webpack
+Redux
+Chart.js
+Calendaring API
+
+*5. What parts have you not decided yet?*
+Do we need jQuery?
+Can we / should we use Axios for GET and POST?
+Should we try to learn Redux?
+
+*6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?*
+Product Owner: David Wen Riccardi-Zhu
+Role: Tie-breaker.
+
+Scrum Master: Chucky
+Role: Facilitate scrum ceremonies.
+
+*7. What is your app going to look like?* (use moqups.com or a piece of paper to sketch something out)
+# IMAGE LINK
+
+*8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time?*
+# MVP FEATURES
++ [ ] Create Sessions
++ [ ] Log Event
++ [ ] Create Event
++ [ ] Display Event / Tables
++ [ ] Charts
+
+# STRETCH GOALS
++ [ ] Custom Tables per Activity
++ [ ] Aesthetics
++ [ ] Authentication
++ [ ] Date Range
++ [ ] Calendar
+  - [ ] Planning Events
+
+*9. What’s your schema going to look like?* (diagram)
+# QUESTIONS
+# QUESTIONS
+# QUESTIONS
+
++ One Table Approach
+|----------+--------+------------------|
+| _id      | USER   | EVENTS           |
+|----------+--------+------------------|
+| objectId | string | Array of Objects |
+|----------+--------+------------------|
+Each object is an event object {event: '', timestamp: new Date(), description: '', duration: ''}
+
++ Two Tables Approach
+|----------+--------+--------------------|
+| _id      | USER   | EVENTS             |
+|----------+--------+--------------------|
+| objectId | string | Array of objectIds |
+|----------+--------+--------------------|
+
+|----------+-----------+----------+--------+----------|
+| _id      | TIMESTAMP | DURATION | EVENT  | USER     |
+|----------+-----------+----------+--------+----------|
+| objectId | Date      | Date     | string | objectId |
+|----------+-----------+----------+--------+----------|
+
+*10. What components are necessary (client side, server side, database, outside APIs, etc)?*
+How are these pieces going to be connected? (architectural diagram)
+# IMAGE LINK
+
+*11. What are your RESTful API endpoints going to be?*
+|---------+-------------------------------+---------------------+--------------------|
+| METHOD  | URL                           | REQUEST             | RESPONSE           |
+|---------+-------------------------------+---------------------+--------------------|
+| GET     | /                             |                     | html               |
+| GET (?) | /login                        |                     | html               |
+| POST    | /login                        | {username: 'stone') | redirect           |
+| GET     | /signup                       |                     | html               |
+| POST    | /signup                       | json (username)     | redirect           |
+| GET     | /username                     |                     | html               |
+| GET     | /api/username/event           | json (username)     | (array of objects) |
+| POST    | /api/username/event           | json (event info)   | string             |
+| POST    | /api/username/createEventType | json                | string             |
+|---------+-------------------------------+---------------------+--------------------|
+
+*12. Who's working on which parts of the app?*
+# QUESTIONS
+# QUESTIONS
+# QUESTIONS
+We would like to rotate since we want exposure, but we're concerned about time and complexity.
+
+*13. What are you most excited about for this project?* (one sentence from each team member)
+Alex: Not lonely anymore.
+Chucky: The groupwork, and learning the front-end better.
+David: Chart.js!
+Jon: Fullstack practice.
+
+*14. What are you looking forward to the least for this project?* (one sentence from each team member)
+Alex: Possibility of breaking the app because of one stupid mistake.
+Chucky: git
+David: git
+Jon: git
+
+*15. What other questions do you have for your tech mentor?*
+
+*16. What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?*
+0800-1200 PST. No work on Thursday, Sunday.

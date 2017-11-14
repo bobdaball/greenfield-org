@@ -5,8 +5,46 @@
 - Solo Week: Monday, November 20
 
 ** Backlog
-+ [ ] Decide on idea.
+*** Decide on idea.
+We will make an event tracker with graph properties.
+
+*** Plan features and priorities.
+# MVP FEATURES
++ [ ] Create Sessions
++ [ ] Log Event
++ [ ] Create Event
++ [ ] Display Event / Tables
++ [ ] Charts
+
+# STRETCH GOALS
++ [ ] Authentication
++ [ ] Date Range
++ [ ] Calendar
+  - [ ] Planning Events
+
+*** Discuss Tech Stack
+Technology stack decisions:
+- We will use webpack.
+- Use Redux or not?
+
+Cost-Benefit Analysis
+|----------+------|
+| PRO      | CON  |
+|----------+------|
+| Learning |      |
+|          | Time |
+|----------+------|
+
+Stuff we don't know:
+1. Webpack
+2. Chart.js
+3. Redux
+
+*** Project Setup
++ [ ] Setup Initial Documentation
   - [ ] Setup README.md / Press-Release
+  - [ ] Setup scoping document.
+
 + [ ] Setup eslint style guide.
   - [ ] Setup STYLE-GUIDE.md
 + [ ] Setup github project.
@@ -17,9 +55,6 @@
     - Production? Staging?
 + [ ] Setup basic server.
 + [ ] Deploy server.
-+ [ ] Technology stack decisions:
-  - [ ] Use Redux or not?
-  - [ ] Use webpack or not?
 
 ** In-Progress
 
@@ -40,13 +75,13 @@
 * Project Logistics
 
 *** Github
-
-
 *** Documentation
+
+*** Schemas
+
 
 *** Style Guide
 - AirBNB?
-
 
 *** Technology Stack
 - MongoDB
@@ -54,7 +89,11 @@
 - React
 - Node
 
+*** Users
+Mock users.
+
 *** Waffle
+https://waffle.io/stoneandsand/stoneandsand
 
 * Team Logistics
 
@@ -110,7 +149,7 @@
 Morning Half-Day (?)
 
 ** Learning Focus Areas
-+ Aesthetics (Bootstrap, Material.io)
++ Aesthetics (Bootstrap, Material.ui)
 + Async + Promises
 + Authentication 
 + Data Visualization
