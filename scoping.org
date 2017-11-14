@@ -1,43 +1,53 @@
 *0. What’s your team name, and who’s on your team?*
+
 Stone and Sand
 
 *1. What's the link to your GitHub repo?*
+
 https://github.com/stoneandsand/stoneandsand/
 
 *2. What's the link to your Waffle.io (or alternative)?*
+
 https://waffle.io/stoneandsand/stoneandsand 
 
 *3. What's your project idea (in 1 or 2 sentences)?*
+
 Daily life event tracker with data visualization.
 
 *4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?*
-# QUESTIONS
-# QUESTIONS
-# QUESTIONS
-# jQuery vs Axios ???
-# Redux ???
 
 MongoDB + Mongoose
+
 Express
-React + jQuery(?) Axios
+
+React + Axios
+
 Node
 
 Additional technologies:
+
 Webpack
+
 Redux
+
 Chart.js
+
 Calendaring API
 
 *5. What parts have you not decided yet?*
-Do we need jQuery?
-Can we / should we use Axios for GET and POST?
+# RESOLVE
+# RESOLVE
+# RESOLVE
 Should we try to learn Redux?
 
 *6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?*
+
 Product Owner: David Wen Riccardi-Zhu
+
 Role: Tie-breaker.
 
 Scrum Master: Chucky
+
 Role: Facilitate scrum ceremonies.
 
 *7. What is your app going to look like?* (use moqups.com or a piece of paper to sketch something out)
@@ -111,18 +121,26 @@ How are these pieces going to be connected? (architectural diagram)
 We would like to rotate since we want exposure, but we're concerned about time and complexity.
 
 *13. What are you most excited about for this project?* (one sentence from each team member)
+
 Alex: Not lonely anymore.
+
 Chucky: The groupwork, and learning the front-end better.
+
 David: Chart.js!
+
 Jon: Fullstack practice.
 
 *14. What are you looking forward to the least for this project?* (one sentence from each team member)
+
 Alex: Possibility of breaking the app because of one stupid mistake.
 Chucky: git
+
 David: git
+
 Jon: git
 
 *15. What other questions do you have for your tech mentor?*
 
 *16. What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?*
+
 0800-1200 PST. No work on Thursday, Sunday.
