@@ -1,0 +1,16 @@
+* 2017-11-13 Mon
+** log                                                                  :log:
+:PROPERTIES:
+:NOTES:  
+:END:
+:LOGBOOK:
+   - Added [2017-11-14 Tue 04:57].
+   :END:
+
+The team explored a range of ideas.
+
+Of these, we initially chose to focus on an application that would identify and track music played from a non-networked audio source, like a record player. Two concerns about this idea were audio capture and finding a workable API to fingerprint the music. After exploring these two concerns, the team decided to shelve this idea for now, while leaving an open door for future implementation.
+
+The team is now pivoting towards implementing some sort of event or activity tracker. Extensions on this concept include habit tracking (or more generally, using tracking to generate lifestyle insights for the user), social networking aspects, calendar integration, and data visualization (e.g., correlating trends).
+
+The team decided to review, clarify, and finalize the idea tomorrow morning (20171114).
