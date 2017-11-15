@@ -62,6 +62,7 @@ Diagram.
 
 * 9. What’s your schema going to look like?
 ** OPTION 1:
+One event per user.
 |----------+--------+--------+--------+-----------+--------------------------------------|
 | _id      | USER   | UNIT   |  LIMIT | TIMEFRAME | OCCURRENCES                          |
 |----------+--------+--------+--------+-----------+--------------------------------------|
@@ -72,44 +73,42 @@ Diagram.
 Potentially use one object for limit + timeframe.
 
 ** OPTION 2:
-|-----+-------|
-| _id | USER  |
-|-----+-------|
-|   1 | stone |
-|   2 | sand  |
-|-----+-------|
-
-
-|------+-------------+-------+-------+-----------+--------------------------------------|
-| USER | EVENT       | UNIT  | LIMIT | TIMEFRAME | OCCURRENCES                          |
-|------+-------------+-------+-------+-----------+--------------------------------------|
-|    1 | smoking     | packs |     5 | day       | [{ timestamp: '20171114', value: 3}] |
-|    1 | video-games | hours |     8 | week      | [{ timestamp: '20171114', value: 3}] |
-|    2 | medicine    | pills |     3 | week      | [{ timestamp: '20171114', value: 3}] |
-|------+-------------+-------+-------+-----------+--------------------------------------|
+Multiple events per user, additional column for event.
+|----------+--------+--------+------------+--------+-----------+--------------------------------------|
+| _id      | USER   | UNIT   | EVENT      |  LIMIT | TIMEFRAME | OCCURRENCES                          |
+|----------+--------+--------+------------+--------+-----------+--------------------------------------|
+| objectId | String | String | String     | Number | String    | Array of objects                     |
+| xxxxxxxx | sand   | packs  | smoking    |      5 | day       | [{ timestamp: '20171114', value: 3}] |
+| xxxxxxxx | sand   | hours  | videogames |      5 | day       | [{ timestamp: '20171114', value: 3}] |
+| xxxxxxxx | stone  | pills  |            |      3 | week      | [{ timestamp: '20171114', value: 3}] |
+|----------+--------+--------+------------+--------+-----------+--------------------------------------|
 Potentially use one object for limit + timeframe.
-   
-** Example Data
-*** Occurrences Array
-#+BEGIN_SRC javascript
-[{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
-#+END_SRC
 
-*** Occurrences Object for Multiple Event Types
+** OPTION 3:
+Multiple events per user, occurrences object has sub-objects for each type of event.
+|----------+--------+-----------|
+| _id      | USER   | EVENTS    |
+|----------+--------+-----------|
+| objectId | String | Object    |
+| xxxxxxxx | sand   | *see below* |
+| xxxxxxxx | stone  | *see below* |
+|----------+--------+-----------|
+
+** Occurrences Object for Multiple Event Types
 If we add multiple events, drop unit column, evolve occurrences to this schema:
 #+BEGIN_SRC javascript
-  occurrences = {
+  events = {
     smoking: {
       unit: 'packs',
       limit: 5,
       timeframe: 'day',
-      occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
+      occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8}]
     },
     videogames: {
       unit: 'hours',
       limit: 8,
       timeframe: 'week',
-      occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
+      occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8}]
     }
   };
 
@@ -119,6 +118,32 @@ If we add multiple events, drop unit column, evolve occurrences to this schema:
     console.log(occurence.timestamp);
     console.log(occurrence.value);
   });
+#+END_SRC
+
+
+** OPTION 4:
+Multiple events per user, two tables.
+|-----+-------|
+| _id | USER  |
+|-----+-------|
+|   1 | stone |
+|   2 | sand  |
+|-----+-------|
+
+
+|-----+---------+-------------+-------+-------+-----------+--------------------------------------|
+| _id | USER_id | EVENT       | UNIT  | LIMIT | TIMEFRAME | OCCURRENCES                          |
+|-----+---------+-------------+-------+-------+-----------+--------------------------------------|
+|   1 |       1 | smoking     | packs |     5 | day       | [{ timestamp: '20171114', value: 3}] |
+|   2 |       1 | video-games | hours |     8 | week      | [{ timestamp: '20171114', value: 3}] |
+|   3 |       2 | medicine    | pills |     3 | week      | [{ timestamp: '20171114', value: 3}] |
+|-----+---------+-------------+-------+-------+-----------+--------------------------------------|
+Potentially use one object for limit + timeframe.
+   
+** Example Data
+*** Occurrences Array
+#+BEGIN_SRC javascript
+[{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
 #+END_SRC
 
 ** Archived Tables                                                  :ARCHIVE:
