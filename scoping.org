@@ -91,7 +91,9 @@ Potentially use one object for limit + timeframe.
    
 ** Example Data
 *** Occurrences Array
+#+BEGIN_SRC javascript
 [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
+#+END_SRC
 
 *** Occurrences Object for Multiple Event Types
 If we add multiple events, drop unit column, evolve occurrences to this schema:
