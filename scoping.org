@@ -1,4 +1,4 @@
-* 0. What’s your team name, and who’s on your team?*
+* *0. What’s your team name, and who’s on your team?*
 
 /Stone and Sand/
 
@@ -40,7 +40,8 @@ Should we try to learn Redux?
 + Scrum Master: Chucky
   - Role: Facilitate scrum ceremonies.
 
-* *7. What is your app going to look like?* (use moqups.com or a piece of paper to sketch something out)
+* *7. What is your app going to look like?*
+Diagram.
 # IMAGE LINK
 
 * *8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time?*
@@ -59,7 +60,7 @@ Should we try to learn Redux?
 + [ ] Calendar
   - [ ] Planning Events
 
-* *9. What’s your schema going to look like?* (diagram)
+* *9. What’s your schema going to look like?*
 ** OPTION 1:
 |----------+--------+--------+--------+-----------+--------------------------------------|
 | _id      | USER   | UNIT   |  LIMIT | TIMEFRAME | OCCURRENCES                          |
@@ -140,10 +141,11 @@ Each object is an event object {event: '', timestamp: new Date(), description: '
 |----------+-----------+----------+--------+----------|
 
 * *10. What components are necessary (client side, server side, database, outside APIs, etc)?*
-How are these pieces going to be connected? (architectural diagram)
+How are these pieces going to be connected? 
+Architectural diagram.
 # IMAGE LINK
 
-* 11. What are your RESTful API endpoints going to be?*
+* *11. What are your RESTful API endpoints going to be?*
 |---------+-------------------------------+---------------------+--------------------|
 | METHOD  | URL                           | REQUEST             | RESPONSE           |
 |---------+-------------------------------+---------------------+--------------------|
@@ -161,14 +163,14 @@ How are these pieces going to be connected? (architectural diagram)
 ** 12. Who's working on which parts of the app?*
 We will rotate to gain exposure with the full stack, and to improve documentation.
 
-* *13. What are you most excited about for this project?* (one sentence from each team member)
+* *13. What are you most excited about for this project?*
 
 - Alex: Not lonely anymore.
 - Chucky: The groupwork, and learning the front-end better.
 - David: Chart.js!
 - Jon: Fullstack practice.
 
-* *14. What are you looking forward to the least for this project?* (one sentence from each team member)
+* *14. What are you looking forward to the least for this project?*
 
 - Alex: Possibility of breaking the app because of one stupid mistake.
 - Chucky: git
