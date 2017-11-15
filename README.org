@@ -75,7 +75,23 @@ Stuff we don't know:
 * Project Logistics
 
 *** Github
+
 *** Documentation
+
+*** Directory Structure
++ .babel.rc
++ client
+  - public
+    - bundle.js
+    - style.css
+    - index.html
+  - src
+    - components
++ db
+  - data
++ package.json
++ server
++ webpack.config
 
 *** Schemas
 

@@ -63,36 +63,36 @@ Diagram.
 * 9. What’s your schema going to look like?
 ** OPTION 1:
 One event per user.
-|----------+--------+--------+--------+-----------+--------------------------------------|
-| _id      | USER   | UNIT   |  LIMIT | TIMEFRAME | OCCURRENCES                          |
-|----------+--------+--------+--------+-----------+--------------------------------------|
-| objectId | String | String | Number | String    | Array of objects                     |
-| xxxxxxxx | sand   | packs  |      5 | day       | [{ timestamp: '20171114', value: 3}] |
-| xxxxxxxx | stone  | pills  |      3 | week      | [{ timestamp: '20171114', value: 3}] |
-|----------+--------+--------+--------+-----------+--------------------------------------|
+|----------+--------+----------+--------+--------+-----------+--------------------------------------|
+| _id      | USER   | PASSWORD | UNIT   |  LIMIT | TIMEFRAME | OCCURRENCES                          |
+|----------+--------+----------+--------+--------+-----------+--------------------------------------|
+| objectId | String |          | String | Number | String    | Array of objects                     |
+| xxxxxxxx | sand   |          | packs  |      5 | day       | [{ timestamp: '20171114', value: 3}] |
+| xxxxxxxx | stone  |          | pills  |      3 | week      | [{ timestamp: '20171114', value: 3}] |
+|----------+--------+----------+--------+--------+-----------+--------------------------------------|
 Potentially use one object for limit + timeframe.
 
 ** OPTION 2:
 Multiple events per user, additional column for event.
-|----------+--------+--------+------------+--------+-----------+--------------------------------------|
-| _id      | USER   | UNIT   | EVENT      |  LIMIT | TIMEFRAME | OCCURRENCES                          |
-|----------+--------+--------+------------+--------+-----------+--------------------------------------|
-| objectId | String | String | String     | Number | String    | Array of objects                     |
-| xxxxxxxx | sand   | packs  | smoking    |      5 | day       | [{ timestamp: '20171114', value: 3}] |
-| xxxxxxxx | sand   | hours  | videogames |      5 | day       | [{ timestamp: '20171114', value: 3}] |
-| xxxxxxxx | stone  | pills  |            |      3 | week      | [{ timestamp: '20171114', value: 3}] |
-|----------+--------+--------+------------+--------+-----------+--------------------------------------|
+|----------+--------+----------+--------+------------+--------+-----------+--------------------------------------|
+| _id      | USER   | PASSWORD | UNIT   | EVENT      |  LIMIT | TIMEFRAME | OCCURRENCES                          |
+|----------+--------+----------+--------+------------+--------+-----------+--------------------------------------|
+| objectId | String |          | String | String     | Number | String    | Array of objects                     |
+| xxxxxxxx | sand   |          | packs  | smoking    |      5 | day       | [{ timestamp: '20171114', value: 3}] |
+| xxxxxxxx | sand   |          | hours  | videogames |      5 | day       | [{ timestamp: '20171114', value: 3}] |
+| xxxxxxxx | stone  |          | pills  |            |      3 | week      | [{ timestamp: '20171114', value: 3}] |
+|----------+--------+----------+--------+------------+--------+-----------+--------------------------------------|
 Potentially use one object for limit + timeframe.
 
 ** OPTION 3:
 Multiple events per user, occurrences object has sub-objects for each type of event.
-|----------+--------+-----------|
-| _id      | USER   | EVENTS    |
-|----------+--------+-----------|
-| objectId | String | Object    |
-| xxxxxxxx | sand   | *see below* |
-| xxxxxxxx | stone  | *see below* |
-|----------+--------+-----------|
+|----------+--------+----------+-----------|
+| _id      | USER   | PASSWORD | EVENTS    |
+|----------+--------+----------+-----------|
+| objectId | String |          | Object    |
+| xxxxxxxx | sand   |          | *see below* |
+| xxxxxxxx | stone  |          | *see below* |
+|----------+--------+----------+-----------|
 
 ** Occurrences Object for Multiple Event Types
 If we add multiple events, drop unit column, evolve occurrences to this schema:
@@ -123,12 +123,12 @@ If we add multiple events, drop unit column, evolve occurrences to this schema:
 
 ** OPTION 4:
 Multiple events per user, two tables.
-|-----+-------|
-| _id | USER  |
-|-----+-------|
-|   1 | stone |
-|   2 | sand  |
-|-----+-------|
+|-----+-------+----------|
+| _id | USER  | PASSWORD |
+|-----+-------+----------|
+|   1 | stone |          |
+|   2 | sand  |          |
+|-----+-------+----------|
 
 
 |-----+---------+-------------+-------+-------+-----------+--------------------------------------|
