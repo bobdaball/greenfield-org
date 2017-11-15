@@ -61,6 +61,54 @@ Diagram.
   - [ ] Planning Events
 
 * 9. What’s your schema going to look like?
+#+BEGIN_SRC javascript
+  database = {
+    {
+      user: String,
+      password: String,
+      habits: {
+        smoking: {
+          unit: 'packs',
+          limit: 5,
+          timeframe: 'day',
+          occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8}]
+        },
+        videogames: {
+          unit: 'hours',
+          limit: 8,
+          timeframe: 'week',
+          occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8}]
+        }
+      }
+    }
+  };
+#+END_SRC   
+
+** Archived Tables                                                    :ARCHI:
+*** Revision 1
+**** One Table Approach
+|----------+--------+------------------|
+| _id      | USER   | EVENTS           |
+|----------+--------+------------------|
+| objectId | string | Array of Objects |
+|----------+--------+------------------|
+Each object is an event object {event: '', timestamp: new Date(), description: '', duration: ''}
+
+**** Two Tables Approach
+|----------+--------+--------------------|
+| _id      | USER   | EVENTS             |
+|----------+--------+--------------------|
+| objectId | string | Array of objectIds |
+|----------+--------+--------------------|
+
+
+|----------+-----------+----------+--------+----------|
+| _id      | TIMESTAMP | DURATION | EVENT  | USER     |
+|----------+-----------+----------+--------+----------|
+| objectId | Date      | Date     | string | objectId |
+|----------+-----------+----------+--------+----------|
+
+*** Revision 2
 ** OPTION 1:
 One event per user.
 |----------+--------+----------+--------+--------+-----------+--------------------------------------|
@@ -120,7 +168,6 @@ If we add multiple events, drop unit column, evolve occurrences to this schema:
   });
 #+END_SRC
 
-
 ** OPTION 4:
 Multiple events per user, two tables.
 |-----+-------+----------|
@@ -139,35 +186,12 @@ Multiple events per user, two tables.
 |   3 |       2 | medicine    | pills |     3 | week      | [{ timestamp: '20171114', value: 3}] |
 |-----+---------+-------------+-------+-------+-----------+--------------------------------------|
 Potentially use one object for limit + timeframe.
-   
+
 ** Example Data
 *** Occurrences Array
 #+BEGIN_SRC javascript
 [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
 #+END_SRC
-
-** Archived Tables                                                  :ARCHIVE:
-*** One Table Approach
-|----------+--------+------------------|
-| _id      | USER   | EVENTS           |
-|----------+--------+------------------|
-| objectId | string | Array of Objects |
-|----------+--------+------------------|
-Each object is an event object {event: '', timestamp: new Date(), description: '', duration: ''}
-
-*** Two Tables Approach
-|----------+--------+--------------------|
-| _id      | USER   | EVENTS             |
-|----------+--------+--------------------|
-| objectId | string | Array of objectIds |
-|----------+--------+--------------------|
-
-
-|----------+-----------+----------+--------+----------|
-| _id      | TIMESTAMP | DURATION | EVENT  | USER     |
-|----------+-----------+----------+--------+----------|
-| objectId | Date      | Date     | string | objectId |
-|----------+-----------+----------+--------+----------|
 
 
 * 10. What components are necessary (client side, server side, database, outside APIs, etc)?
