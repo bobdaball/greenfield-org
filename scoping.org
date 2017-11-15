@@ -119,7 +119,7 @@ If we add multiple events, drop unit column, evolve occurrences to this schema:
   });
 #+END_SRC
 
-** Archived Tables :ARCHIVE:
+** Archived Tables                                                  :ARCHIVE:
 *** One Table Approach
 |----------+--------+------------------|
 | _id      | USER   | EVENTS           |
@@ -135,11 +135,13 @@ Each object is an event object {event: '', timestamp: new Date(), description: '
 | objectId | string | Array of objectIds |
 |----------+--------+--------------------|
 
+
 |----------+-----------+----------+--------+----------|
 | _id      | TIMESTAMP | DURATION | EVENT  | USER     |
 |----------+-----------+----------+--------+----------|
 | objectId | Date      | Date     | string | objectId |
 |----------+-----------+----------+--------+----------|
+
 
 * 10. What components are necessary (client side, server side, database, outside APIs, etc)?
 How are these pieces going to be connected? 
