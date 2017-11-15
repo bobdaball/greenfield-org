@@ -70,9 +70,59 @@ Role: Facilitate scrum ceremonies.
   - [ ] Planning Events
 
 *9. What’s your schema going to look like?* (diagram)
-# QUESTIONS
-# QUESTIONS
-# QUESTIONS
+OPTION 1:
+|----------+--------+--------+--------+-----------+--------------------------------------|
+| _id      | USER   | UNIT   |  LIMIT | TIMEFRAME | OCCURRENCES                          |
+|----------+--------+--------+--------+-----------+--------------------------------------|
+| objectId | String | String | Number | String    | Array of objects                     |
+| xxxxxxxx | sand   | packs  |      5 | day       | [{ timestamp: '20171114', value: 3}] |
+| xxxxxxxx | stone  | pills  |      3 | week      | []                                   |
+|----------+--------+--------+--------+-----------+--------------------------------------|
+
+OPTION 2:
+|-----+-------|
+| _id | USER  |
+|-----+-------|
+|   1 | stone |
+|   2 | sand  |
+|-----+-------|
+
+|------+-------------+-------+-------+-----------+--------------------------------------|
+| USER | EVENT       | UNIT  | LIMIT | TIMEFRAME | OCCURRENCES                          |
+|------+-------------+-------+-------+-----------+--------------------------------------|
+|    1 | smoking     | packs |     5 | day       | [{ timestamp: '20171114', value: 3}] |
+|    1 | video-games | hours |     8 | week      | [{ timestamp: '20171114', value: 3}] |
+|    2 | medicine    | pills |     3 | week      | [{ timestamp: '20171114', value: 3}] |
+|------+-------------+-------+-------+-----------+--------------------------------------|
+   
+[{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
+
+If we add multiple events, drop unit column, evolve occurrences to this schema:
+#+BEGIN_SRC javascript
+  occurrences = {
+    smoking: {
+      unit: 'packs',
+      limit: 5,
+      timeframe: 'day',
+      occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
+    },
+    videogames: {
+      unit: 'hours',
+      limit: 8,
+      timeframe: 'week',
+      occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
+    }
+  };
+
+  let unit = occurrences.videogames.unit;
+  let limit = occurences.videogames.limit;
+  let lastWeek = occurrences.videogames.occurrences.forEach((occurrence) => {
+    console.log(occurence.timestamp);
+    console.log(occurrence.value);
+  });
+#+END_SRC
+Potentially add event into occurrence object.
+Potentially use one object for limit + timeframe.
 
 + One Table Approach
 |----------+--------+------------------|
