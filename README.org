@@ -25,7 +25,7 @@ We will make an event tracker with graph properties.
 *** Discuss Tech Stack
 Technology stack decisions:
 - We will use webpack.
-- Use Redux or not?
+- But not Redux.
 
 Cost-Benefit Analysis
 |----------+------|
@@ -41,9 +41,9 @@ Stuff we don't know:
 3. Redux
 
 *** Project Setup
-+ [ ] Setup Initial Documentation
-  - [ ] Setup README.md / Press-Release
-  - [ ] Setup scoping document.
++ [X] Setup Initial Documentation
+  - [X] Setup README.md / Press-Release
+  - [X] Setup scoping document.
 
 + [ ] Setup eslint style guide.
   - [ ] Setup STYLE-GUIDE.md
@@ -75,13 +75,29 @@ Stuff we don't know:
 * Project Logistics
 
 *** Github
+
 *** Documentation
+
+*** Directory Structure
++ .babel.rc
++ client
+  - public
+    - bundle.js
+    - style.css
+    - index.html
+  - src
+    - components
++ db
+  - data
++ package.json
++ server
++ webpack.config
 
 *** Schemas
 
 
 *** Style Guide
-- AirBNB?
+- AirBNB
 
 *** Technology Stack
 - MongoDB
