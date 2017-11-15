@@ -1,20 +1,20 @@
-* 0. What’s your team name, and who’s on your team?*
+* 0. What’s your team name, and who’s on your team?
 
 /Stone and Sand/
 
-* *1. What's the link to your GitHub repo?*
+* 1. What's the link to your GitHub repo?
 
 https://github.com/stoneandsand/stoneandsand/
 
-* *2. What's the link to your Waffle.io (or alternative)?*
+* 2. What's the link to your Waffle.io (or alternative)?
 
 https://waffle.io/stoneandsand/stoneandsand 
 
-* *3. What's your project idea (in 1 or 2 sentences)?*
+* 3. What's your project idea (in 1 or 2 sentences)?
 
 Daily life event tracker with data visualization.
 
-* *4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?*
+* 4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?
 
 + Tech Stack:
   - MongoDB + Mongoose
@@ -28,11 +28,11 @@ Daily life event tracker with data visualization.
   - Chart.js
   - Calendaring API
 
-* *5. What parts have you not decided yet?*
+* 5. What parts have you not decided yet?
 *TO RESOLVE*
 Should we try to learn Redux?
 
-* *6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?*
+* 6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?
 
 + Product Owner: David Wen Riccardi-Zhu
   - Role: Tie-breaker.
@@ -40,10 +40,11 @@ Should we try to learn Redux?
 + Scrum Master: Chucky
   - Role: Facilitate scrum ceremonies.
 
-* *7. What is your app going to look like?* (use moqups.com or a piece of paper to sketch something out)
+* 7. What is your app going to look like?
+Diagram.
 # IMAGE LINK
 
-* *8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time?*
+* 8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time?
 ** MVP FEATURES
 + [ ] Create Sessions
 + [ ] Log Event
@@ -59,14 +60,14 @@ Should we try to learn Redux?
 + [ ] Calendar
   - [ ] Planning Events
 
-* *9. What’s your schema going to look like?* (diagram)
+* 9. What’s your schema going to look like?
 ** OPTION 1:
 |----------+--------+--------+--------+-----------+--------------------------------------|
 | _id      | USER   | UNIT   |  LIMIT | TIMEFRAME | OCCURRENCES                          |
 |----------+--------+--------+--------+-----------+--------------------------------------|
 | objectId | String | String | Number | String    | Array of objects                     |
 | xxxxxxxx | sand   | packs  |      5 | day       | [{ timestamp: '20171114', value: 3}] |
-| xxxxxxxx | stone  | pills  |      3 | week      | []                                   |
+| xxxxxxxx | stone  | pills  |      3 | week      | [{ timestamp: '20171114', value: 3}] |
 |----------+--------+--------+--------+-----------+--------------------------------------|
 Potentially use one object for limit + timeframe.
 
@@ -77,6 +78,7 @@ Potentially use one object for limit + timeframe.
 |   1 | stone |
 |   2 | sand  |
 |-----+-------|
+
 
 |------+-------------+-------+-------+-----------+--------------------------------------|
 | USER | EVENT       | UNIT  | LIMIT | TIMEFRAME | OCCURRENCES                          |
@@ -117,7 +119,7 @@ If we add multiple events, drop unit column, evolve occurrences to this schema:
   });
 #+END_SRC
 
-** Archived Tables :ARCHIVE:
+** Archived Tables                                                  :ARCHIVE:
 *** One Table Approach
 |----------+--------+------------------|
 | _id      | USER   | EVENTS           |
@@ -133,17 +135,20 @@ Each object is an event object {event: '', timestamp: new Date(), description: '
 | objectId | string | Array of objectIds |
 |----------+--------+--------------------|
 
+
 |----------+-----------+----------+--------+----------|
 | _id      | TIMESTAMP | DURATION | EVENT  | USER     |
 |----------+-----------+----------+--------+----------|
 | objectId | Date      | Date     | string | objectId |
 |----------+-----------+----------+--------+----------|
 
-* *10. What components are necessary (client side, server side, database, outside APIs, etc)?*
-How are these pieces going to be connected? (architectural diagram)
+
+* 10. What components are necessary (client side, server side, database, outside APIs, etc)?
+How are these pieces going to be connected? 
+Architectural diagram.
 # IMAGE LINK
 
-* 11. What are your RESTful API endpoints going to be?*
+* 11. What are your RESTful API endpoints going to be?
 |---------+-------------------------------+---------------------+--------------------|
 | METHOD  | URL                           | REQUEST             | RESPONSE           |
 |---------+-------------------------------+---------------------+--------------------|
@@ -158,25 +163,25 @@ How are these pieces going to be connected? (architectural diagram)
 | POST    | /api/username/createEventType | json                | string             |
 |---------+-------------------------------+---------------------+--------------------|
 
-** 12. Who's working on which parts of the app?*
+* 12. Who's working on which parts of the app?
 We will rotate to gain exposure with the full stack, and to improve documentation.
 
-* *13. What are you most excited about for this project?* (one sentence from each team member)
+* 13. What are you most excited about for this project?
 
 - Alex: Not lonely anymore.
 - Chucky: The groupwork, and learning the front-end better.
 - David: Chart.js!
 - Jon: Fullstack practice.
 
-* *14. What are you looking forward to the least for this project?* (one sentence from each team member)
+* 14. What are you looking forward to the least for this project?
 
 - Alex: Possibility of breaking the app because of one stupid mistake.
 - Chucky: git
 - David: git
 - Jon: git
 
-* *15. What other questions do you have for your tech mentor?*
+* 15. What other questions do you have for your tech mentor?
 
-* *16. What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?*
+* 16. What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?
 - 0800-1200 PST.
 - No work on Thursday, Sunday.
