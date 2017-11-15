@@ -67,7 +67,7 @@ Diagram.
 |----------+--------+--------+--------+-----------+--------------------------------------|
 | objectId | String | String | Number | String    | Array of objects                     |
 | xxxxxxxx | sand   | packs  |      5 | day       | [{ timestamp: '20171114', value: 3}] |
-| xxxxxxxx | stone  | pills  |      3 | week      | []                                   |
+| xxxxxxxx | stone  | pills  |      3 | week      | [{ timestamp: '20171114', value: 3}] |
 |----------+--------+--------+--------+-----------+--------------------------------------|
 Potentially use one object for limit + timeframe.
 
@@ -78,6 +78,7 @@ Potentially use one object for limit + timeframe.
 |   1 | stone |
 |   2 | sand  |
 |-----+-------|
+
 
 |------+-------------+-------+-------+-----------+--------------------------------------|
 | USER | EVENT       | UNIT  | LIMIT | TIMEFRAME | OCCURRENCES                          |
