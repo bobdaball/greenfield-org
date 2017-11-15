@@ -94,7 +94,28 @@ Stuff we don't know:
 + webpack.config
 
 *** Schemas
-
+#+BEGIN_SRC javascript
+  database = {
+    {
+      user: String,
+      password: String,
+      habits: {
+        smoking: {
+          unit: 'packs',
+          limit: 5,
+          timeframe: 'day',
+          occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8}]
+        },
+        videogames: {
+          unit: 'hours',
+          limit: 8,
+          timeframe: 'week',
+          occurrences: [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8}]
+        }
+      }
+    }
+  };
+#+END_SRC   
 
 *** Style Guide
 - AirBNB
