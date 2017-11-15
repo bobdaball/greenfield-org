@@ -1,67 +1,57 @@
-*0. What’s your team name, and who’s on your team?*
+* 0. What’s your team name, and who’s on your team?*
 
-Stone and Sand
+/Stone and Sand/
 
-*1. What's the link to your GitHub repo?*
+* *1. What's the link to your GitHub repo?*
 
 https://github.com/stoneandsand/stoneandsand/
 
-*2. What's the link to your Waffle.io (or alternative)?*
+* *2. What's the link to your Waffle.io (or alternative)?*
 
 https://waffle.io/stoneandsand/stoneandsand 
 
-*3. What's your project idea (in 1 or 2 sentences)?*
+* *3. What's your project idea (in 1 or 2 sentences)?*
 
 Daily life event tracker with data visualization.
 
-*4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?*
+* *4. What tech stack do you plan on focusing on? Which parts are familiar, and which parts are new?*
 
-MongoDB + Mongoose
++ Tech Stack:
+  - MongoDB + Mongoose
+  - Express
+  - React + Axios
+  - Node
 
-Express
++ Additional technologies:
+  - Webpack
+  - Redux
+  - Chart.js
+  - Calendaring API
 
-React + Axios
-
-Node
-
-Additional technologies:
-
-Webpack
-
-Redux
-
-Chart.js
-
-Calendaring API
-
-*5. What parts have you not decided yet?*
-# RESOLVE
-# RESOLVE
-# RESOLVE
+* *5. What parts have you not decided yet?*
+*TO RESOLVE*
 Should we try to learn Redux?
 
-*6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?*
+* *6. Who is the product owner? Who is the scrum master? What are their roles (in 1 sentence)?*
 
-Product Owner: David Wen Riccardi-Zhu
++ Product Owner: David Wen Riccardi-Zhu
+  - Role: Tie-breaker.
 
-Role: Tie-breaker.
++ Scrum Master: Chucky
+  - Role: Facilitate scrum ceremonies.
 
-Scrum Master: Chucky
-
-Role: Facilitate scrum ceremonies.
-
-*7. What is your app going to look like?* (use moqups.com or a piece of paper to sketch something out)
+* *7. What is your app going to look like?* (use moqups.com or a piece of paper to sketch something out)
 # IMAGE LINK
 
-*8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time?*
-# MVP FEATURES
+* *8. What's on your list of MVP features? Which will you cut back if you run out of time? Which are stretch goals if you have extra time?*
+** MVP FEATURES
 + [ ] Create Sessions
 + [ ] Log Event
 + [ ] Create Event
 + [ ] Display Event / Tables
 + [ ] Charts
 
-# STRETCH GOALS
+** STRETCH GOALS
 + [ ] Custom Tables per Activity
 + [ ] Aesthetics
 + [ ] Authentication
@@ -69,8 +59,8 @@ Role: Facilitate scrum ceremonies.
 + [ ] Calendar
   - [ ] Planning Events
 
-*9. What’s your schema going to look like?* (diagram)
-OPTION 1:
+* *9. What’s your schema going to look like?* (diagram)
+** OPTION 1:
 |----------+--------+--------+--------+-----------+--------------------------------------|
 | _id      | USER   | UNIT   |  LIMIT | TIMEFRAME | OCCURRENCES                          |
 |----------+--------+--------+--------+-----------+--------------------------------------|
@@ -78,8 +68,9 @@ OPTION 1:
 | xxxxxxxx | sand   | packs  |      5 | day       | [{ timestamp: '20171114', value: 3}] |
 | xxxxxxxx | stone  | pills  |      3 | week      | []                                   |
 |----------+--------+--------+--------+-----------+--------------------------------------|
+Potentially use one object for limit + timeframe.
 
-OPTION 2:
+** OPTION 2:
 |-----+-------|
 | _id | USER  |
 |-----+-------|
@@ -94,9 +85,13 @@ OPTION 2:
 |    1 | video-games | hours |     8 | week      | [{ timestamp: '20171114', value: 3}] |
 |    2 | medicine    | pills |     3 | week      | [{ timestamp: '20171114', value: 3}] |
 |------+-------------+-------+-------+-----------+--------------------------------------|
+Potentially use one object for limit + timeframe.
    
+** Example Data
+*** Occurrences Array
 [{ timestamp: '20171114', value: 3},{ timestamp: '20171115', value: 3}, { timestamp: '20171116', value: 5}, { timestamp: '20171117', value: 8} ]
 
+*** Occurrences Object for Multiple Event Types
 If we add multiple events, drop unit column, evolve occurrences to this schema:
 #+BEGIN_SRC javascript
   occurrences = {
@@ -121,10 +116,9 @@ If we add multiple events, drop unit column, evolve occurrences to this schema:
     console.log(occurrence.value);
   });
 #+END_SRC
-Potentially add event into occurrence object.
-Potentially use one object for limit + timeframe.
 
-+ One Table Approach
+** Archived Tables :ARCHIVE:
+*** One Table Approach
 |----------+--------+------------------|
 | _id      | USER   | EVENTS           |
 |----------+--------+------------------|
@@ -132,7 +126,7 @@ Potentially use one object for limit + timeframe.
 |----------+--------+------------------|
 Each object is an event object {event: '', timestamp: new Date(), description: '', duration: ''}
 
-+ Two Tables Approach
+*** Two Tables Approach
 |----------+--------+--------------------|
 | _id      | USER   | EVENTS             |
 |----------+--------+--------------------|
@@ -145,11 +139,11 @@ Each object is an event object {event: '', timestamp: new Date(), description: '
 | objectId | Date      | Date     | string | objectId |
 |----------+-----------+----------+--------+----------|
 
-*10. What components are necessary (client side, server side, database, outside APIs, etc)?*
+* *10. What components are necessary (client side, server side, database, outside APIs, etc)?*
 How are these pieces going to be connected? (architectural diagram)
 # IMAGE LINK
 
-*11. What are your RESTful API endpoints going to be?*
+* 11. What are your RESTful API endpoints going to be?*
 |---------+-------------------------------+---------------------+--------------------|
 | METHOD  | URL                           | REQUEST             | RESPONSE           |
 |---------+-------------------------------+---------------------+--------------------|
@@ -164,33 +158,25 @@ How are these pieces going to be connected? (architectural diagram)
 | POST    | /api/username/createEventType | json                | string             |
 |---------+-------------------------------+---------------------+--------------------|
 
-*12. Who's working on which parts of the app?*
-# QUESTIONS
-# QUESTIONS
-# QUESTIONS
-We would like to rotate since we want exposure, but we're concerned about time and complexity.
+** 12. Who's working on which parts of the app?*
+We will rotate to gain exposure with the full stack, and to improve documentation.
 
-*13. What are you most excited about for this project?* (one sentence from each team member)
+* *13. What are you most excited about for this project?* (one sentence from each team member)
 
-Alex: Not lonely anymore.
+- Alex: Not lonely anymore.
+- Chucky: The groupwork, and learning the front-end better.
+- David: Chart.js!
+- Jon: Fullstack practice.
 
-Chucky: The groupwork, and learning the front-end better.
+* *14. What are you looking forward to the least for this project?* (one sentence from each team member)
 
-David: Chart.js!
+- Alex: Possibility of breaking the app because of one stupid mistake.
+- Chucky: git
+- David: git
+- Jon: git
 
-Jon: Fullstack practice.
+* *15. What other questions do you have for your tech mentor?*
 
-*14. What are you looking forward to the least for this project?* (one sentence from each team member)
-
-Alex: Possibility of breaking the app because of one stupid mistake.
-Chucky: git
-
-David: git
-
-Jon: git
-
-*15. What other questions do you have for your tech mentor?*
-
-*16. What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?*
-
-0800-1200 PST. No work on Thursday, Sunday.
+* *16. What are your plans for solo week? What days/times are you meeting? Who’s taking which days off?*
+- 0800-1200 PST.
+- No work on Thursday, Sunday.
