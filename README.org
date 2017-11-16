@@ -79,18 +79,20 @@ Stuff we don't know:
 *** Documentation
 
 *** Directory Structure
-+ .babel.rc
-+ client
-  - public
++ client/
+  - public/
     - bundle.js
-    - style.css
     - index.html
-  - src
-    - components
-+ db
-  - data
+    - style.css
+  - src/
+    - index.jsx
++ db/
+  - data/
+  - index.js
++ .eslintrc
 + package.json
-+ server
++ server/
+  - index.js
 + webpack.config
 
 *** Schemas
